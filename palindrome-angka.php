@@ -1,14 +1,25 @@
 <?php 
+	
+	function palindrome ($string){
+		$output = false;
+		if(strrev($string) == $string){
+			$output = true;
+		}
+		return $output;
+	}
 
 	function palindrome_angka($angka){	
-
-		if ($angka>=1 && $angka<=9) {
-			return $angka=$angka+1;
-		}else{
-			while ((strrev($angka)===$angka)) {
-				return$angka=$angka+1;
-			}
+		$balik = (strrev($angka));
+		if ($angka>=1 && $angka<=8) {
+			return $angka+1;
 		}
+		if (palindrome($angka)){
+			$angka++;
+		}
+		while (palindrome($angka)==false) {
+			$angka++;
+		}
+		return $angka;
 
 	}
 

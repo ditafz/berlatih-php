@@ -1,10 +1,8 @@
 <?php
 function skor_terbesar($arr){
-    for($i=0; $i<count($arr); $i++){
-      $j = $arr[$i];
-      asort($arr);
-
-    }
+  $kelas = array_column($arr, 'kelas');
+  $nilai = array_column($arr, 'nilai');
+  return array_multisort($kelas, SORT_ASC, $nilai, SORT_ASC, $arr);
 }
 
 // TEST CASES

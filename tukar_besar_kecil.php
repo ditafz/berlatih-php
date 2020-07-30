@@ -4,12 +4,15 @@ function tukar_besar_kecil($string){
 	$panjangkata = strlen($string);
 	for ($i=0; $i<$panjangkata; $i++) { 
 		if(ctype_lower($string[$i])) { 
-	        $string[$i] = strtoupper($string[$i]); 
+	        echo strtoupper($string[$i]); 
 	    } 
-	    if (ctype_upper($string[$i])) {
-	    	$string[$i] = strtolower($string[$i]);
+	    else if (ctype_upper($string[$i])) {
+	    	echo strtolower($string[$i]);
 	    }
-	    return $string;
+	    else{
+	    	echo $string[$i];
+	    }
+	    
 	}
 }
 

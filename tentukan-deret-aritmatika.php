@@ -1,6 +1,18 @@
 <?php
 	function tentukan_deret_aritmatika($arr) {
 	// kode di sini
+		if(sizeof($arr)<=1){
+			return True;
+		} 
+
+		$rasio = $arr[1]-$arr[0];
+
+		for ($i=1; $i<sizeof($arr); $i++){ 
+			if (($arr[$i]-($arr[$i-1])) != $rasio){
+				return "False<br>";
+			}
+		}
+		return "True<br>";
 	}
 
 	// TEST CASES
